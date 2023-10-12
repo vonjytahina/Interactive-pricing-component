@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+/* global styles */
+:root {
+  --primary-soft-cyan-full-slider-bar: hsl(174, 77%, 80%);
+  --primary-strong-cyan-slider-backround: hsl(174, 86%, 45%);
+  --primary-light-grayish-red-discount-background: hsl(14, 92%, 95%);
+  --primary-light-red-discount-text: hsl(15, 100%, 70%);
+  --primary-pale-blue-cta-text: hsl(226, 100%, 87%);
+
+  --neutral-white-pricing-component-background: hsl(0, 0%, 100%);
+  --neutral-very-pale-blue-main-background: hsl(230, 100%, 99%);
+  --neutral-light-grayish-blue-empty-slider-bar: hsl(224, 65%, 95%);
+  --neutral-light-grayish-blue-toggle-background: hsl(223, 50%, 87%);
+  --neutral-grayish-blue-text: hsl(225, 20%, 60%);
+  --neutral-dark-desaturated-blue-text-and-cta-background: hsl(227, 35%, 25%);
+
+  --slider-width: 410px;
+  --slider-height: 7px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  width: 1440px;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url('images/bg-pattern.svg') no-repeat, #f9faff;
+  padding-bottom: 125px;
+  position: relative;
+}
+
+.app {
+  margin: 0 auto;
+  width: 525px;
+}
+
+.app .app-top {
+  width: 525px;
+  height: 275px;
+  background: url('images/pattern-circles.svg') no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .app-top>h1 {
+  color: var(--neutral-dark-desaturated-blue-text-and-cta-background);
+  font-weight: 800;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.app .app-top>p {
+  color: var(--neutral-grayish-blue-text);
+}
+
+.app .app-bottom {
+  background: var(--neutral-white-pricing-component-background);
+  border-radius: 10px;
+  width: 525px;
+  height: 400px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.app .app-bottom .choice {
+  width: 525px;
+  height: 250px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 45px 40px;
+}
+
+.app .app-bottom .choice .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app .app-bottom .choice .details .page {
+  color: var(--neutral-grayish-blue-text);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.app .app-bottom .details .amount {
+  display: flex;
+  align-items: center;
+}
+
+.app .app-bottom .choice .mobile-amount {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .app-bottom .details .amount .monthly-price,
+.app .app-bottom .details .amount .yearly-price {
+  color: var(--neutral-dark-desaturated-blue-text-and-cta-background);
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.app .app-bottom .details .amount .duration {
+  color: var(--neutral-grayish-blue-text);
+  margin-left: 10px;
+}
+
+.app .app-bottom .range {
+  display: block;
+  margin: 35px 0px 50px 0px;
+  width: 100%;
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 5px;
+  background: #eceefb;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: url('images/icon-slider.svg') no-repeat, var(--primary-strong-cyan-slider-backround);
+  background-position: center center;
+  cursor: pointer;
+  box-shadow: 0px 15px 15px 0px rgba(165, 243, 235, .8);
+  transition: all .3s ease-in-out;
+}
+
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: url('images/icon-slider.svg') no-repeat, var(--primary-soft-cyan-full-slider-bar);
+  background-position: center center;
+}
+
+.app .app-bottom .choice .billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app .app-bottom .choice .billing .monthly-billing,
+.app .app-bottom .choice .billing .yearly-billing {
+  font-size: 12px;
+  color: var(--neutral-grayish-blue-text);
+}
+
+.app .app-bottom .choice .billing .switch-billing {
+  width: 45px;
+  height: 25px;
+  border-radius: 20px;
+  background: var(--neutral-light-grayish-blue-toggle-background);
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.app .app-bottom .choice .billing .switch-billing:hover {
+  background: var(--primary-soft-cyan-full-slider-bar);
+}
+
+.app .app-bottom .choice .billing .switch-billing .switch-thumb {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--neutral-white-pricing-component-background);
+  transition: all .3s ease-in-out;
+}
+
+.app .app-bottom .choice .billing .yearly-billing {
+  position: relative;
+}
+
+.app .app-bottom .choice .billing .yearly-billing:after {
+  content: "25% discount";
+  position: absolute;
+  top: 50%;
+  left: 165%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--primary-light-grayish-red-discount-background);
+  color: var(--primary-light-red-discount-text);
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .app-bottom .cta {
+  width: 525px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+
+.app .app-bottom .cta ul li {
+  color: var(--neutral-grayish-blue-text);
+  list-style: none;
+  margin-bottom: 15px;
+  position: relative;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.app .app-bottom .cta ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.app .app-bottom .cta ul li:before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: url('images/icon-check.svg') no-repeat;
+  background-position: center center;
+}
+
+.app .app-bottom .cta .start-trial {
+  width: 170px;
+  height: 40px;
+  border-radius: 30px;
+  background: var(--neutral-dark-desaturated-blue-text-and-cta-background);
+  color: var(--primary-pale-blue-cta-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all .3s ease-in-out;
+}
+
+.app .app-bottom .cta .start-trial:hover {
+  cursor: pointer;
+  color: var(--neutral-white-pricing-component-background);
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.attribution {
+  margin: 15px auto;
+}
+
+.attribution a {
+  font-size: 11px;
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+    height: 750px;
+  }
+
+  .app {
+    width: 325px;
+    height: 700px;
+  }
+
+  .app .app-top {
+    width: 325px;
+    height: 225px;
+  }
+
+  .app .app-top>h1 {
+    font-size: 20px;
+  }
+
+  .app .app-top>p {
+    font-size: 14px;
+    padding: 0 70px;
+    text-align: center;
+  }
+
+  .app .app-bottom {
+    width: 325px;
+    height: 475px;
+  }
+
+  .app .app-bottom .choice {
+    width: 325px;
+    height: 250px;
+    padding: 35px 25px;
+  }
+
+  .app .app-bottom .choice .details {
+    justify-content: center;
+  }
+
+  .app .app-bottom .choice .details .page,
+  .app .app-bottom .choice .details .page .page-views {
+    font-size: 12px;
+  }
+
+  .app .app-bottom .details .amount {
+    display: none;
+  }
+
+  .app .app-bottom .choice .mobile-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .app .app-bottom .choice .mobile-amount .monthly-price,
+  .app .app-bottom .choice .mobile-amount .yearly-price {
+    color: var(--neutral-dark-desaturated-blue-text-and-cta-background);
+    font-size: 26px;
+    font-weight: 800;
+  }
+
+  .app .app-bottom .choice .mobile-amount .duration {
+    color: var(--neutral-grayish-blue-text);
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+  .app .app-bottom .range {
+    display: block;
+    margin: 35px 0px 35px 0px;
+    width: 100%;
+  }
+
+  .app .app-bottom .choice .billing .yearly-billing:after {
+    content: "-25%";
+    left: 130%;
+    width: 35px;
+
+  }
+
+  .app .app-bottom .cta {
+    width: 325px;
+    height: 225px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 50px;
+  }
+
+  .app .app-bottom .cta ul {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .app .app-bottom .cta ul li {
+    display: inline-block;
+  }
+}

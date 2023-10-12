@@ -1,0 +1,18 @@
+const slider = document.getElementById("slider");
+const pageViewsElement = document.querySelector(".page-views");
+const monthlyPriceElement = document.querySelector(".monthly-price");
+const yearlyPriceElement = document.querySelector(".yearly-price");
+
+// Function to update the background color of the left side of the thumb
+function updateSliderBackground() {
+  const percentage = (slider.value - slider.min) / (slider.max - slider.min);
+  slider.style.background = `linear-gradient(to right, #A5F3EB 0%, #A5F3EB ${
+    percentage * 100
+  }%, #eceefb ${percentage * 100}%, #eceefb 100%)`;
+}
+
+// Apply the background color on document load
+updateSliderBackground();
+
+// Event listener to update the background color when the slider is moved
+slider.addEventListener("input", updateSliderBackground);

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="app">
+
+      <div class="app-top">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+
+      <div class="app-bottom">
+        <div class="choice">
+          <div class="details">
+            <div class="page"><span class="page-views">100K</span> pageviews</div>
+            <div class="amount">
+              <span class="monthly-price">$16.00</span>
+              <span class="yearly-price hide">$16.00</span>
+              <span class="duration">/ month</span>
+            </div>
+          </div>
+          <input type="range" class="range" id="slider" min="0" max="100" value="50" step="25" />
+          <div class="mobile-amount">
+            <span class="monthly-price" id="mobile-monthly-price">$16.00</span>
+            <span class="yearly-price hide" id="mobile-yearly-price">$16.00</span>
+            <span class="duration" id="mobile-duration">/ month</span>
+          </div>
+          <div class="billing">
+            <div class="monthly-billing">Monthly Billing</div>
+            <div class="switch-billing">
+              <div class="switch-thumb"></div>
+            </div>
+            <div class="yearly-billing">Yearly Billing</div>
+          </div>
+        </div>
+        <div class="cta">
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <div class="start-trial">Start my trial</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/vonjytahina" target="_blank">Vonjy Tahina CHAN</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
